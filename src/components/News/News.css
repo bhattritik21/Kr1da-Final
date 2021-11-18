@@ -1,0 +1,123 @@
+
+body{
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    min-height: calc(100vh - 48px);
+    line-height: 1;
+    font-family: IBMPlexSans, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    background-color: #fff;
+} 
+a{
+    text-decoration: none;
+}
+.news_tail>li{
+    list-style: none;
+    padding-bottom: 10px;
+}
+
+/* main starts */
+
+h2{ 
+    text-align: center;
+    color: white;
+    font-weight: bolder;
+    font-size: 2em;
+}
+
+.containers{
+    margin-top: 50px;
+    height: inherit;
+    display: flex;
+    justify-content: space-evenly;
+}
+.card1{
+    width: 70vw;
+    padding: 1% 8% 1% 8%;
+    display: flex;
+    flex-direction: column;
+   
+}
+.newz{
+   padding: 4%;
+    background-color: white;
+    border-radius: 10px;
+  border: 1px solid rgb(180, 180, 180);
+  margin-bottom: 20px;
+}
+.news_head{
+    font-size: 1.7em;
+}
+.newz>img{
+    max-height: 600px;
+  width: 100%;
+  background-size: cover;
+  border-radius: 10px;
+  border: 3px solid rgb(226, 225, 225);
+}
+.news_tail{
+    padding: 2%;
+}
+.news_tail>li{
+   font-size: 1.2em;
+}
+
+.card2{
+    height: fit-content;
+    width: 35vw;
+    margin-right: 0;
+    background-color:  #1b1124 !important;
+}
+.card2>h3{
+    text-align: center;
+    font-size: 2.5rem;
+    color: lavender;
+    font-weight: 900;
+    margin: 7%;
+}
+.readmore{
+    color: rgb(72, 72, 185) !important;
+    font-size: 0.9em !important;
+}
+.desc{
+    font-size: 0.9em !important;
+}
+.highlits{
+    margin: 5%;
+
+    border-radius: 15px;
+    padding: 5%;
+}
+.card-header>h4{
+ font-size: 1em;
+}
+@media  (max-width:1200px){
+    h2{font-size: 2.5em;}
+    h3{font-size: 1.1em;}
+    .card2>h3{ font-size: 1.5rem; }
+    .news_head{font-size: 1.5em;}
+    .news_tail>li{ font-size: 1em; }
+    .card-header>h4{font-size: 0.8em;}
+}
+@media  (max-width:800px){
+    h2{font-size: 1.8em;}
+    h3{font-size: 1em;}
+    .card2>h3{ font-size: 1.2rem; }
+    .news_head{font-size: 1.2em;}
+    .news_tail>li{ font-size: 0.8em; }
+    .card-header>h4{font-size: 0.6em;}
+}
+
+@media  (max-width:500px){
+    h2{font-size: 1.2em;}
+    h3{font-size: 0.9em;}
+    .card2>h3{ font-size: 0.8rem; }
+    .card2{ width: 30vw;}
+    .news_head{font-size: 1em;}
+    .news_tail>li{ font-size: 0.6em; }
+    .card-header>h4{font-size: 0.4em;}
+}
+/* main end */
+
+/* footer starts */
