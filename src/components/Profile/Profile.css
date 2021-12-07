@@ -13,7 +13,7 @@
 .feed{
     width: 60vw;
 }
-h5,h6,p,span{
+h5,.comment>span{
     color: black;
 }
 i{

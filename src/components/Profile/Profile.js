@@ -284,7 +284,7 @@ function Profile() {
                                 </div>
                                 {
                                     element.comments.map((record, index) => {
-                                        return (<h6 style={{ marginLeft: '0' }} key={index}><span style={{ fontWeight: '700' }}>{record.postedBy.name}</span> {record.text}</h6>)
+                                        return (<h6 style={{ marginLeft: '0' }} key={index}><span  style={{ fontWeight: '700' ,color:'black'}}>{record.postedBy.name}</span > {record.text}</h6>)
                                     })
                                 }
                                 <form onSubmit={(e) => {
