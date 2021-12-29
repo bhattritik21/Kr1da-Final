@@ -22,8 +22,8 @@ function Stats() {
   var i = 1;
 
   return (
-    <div className="container">
-      <div id="title" className="text-center"><h1 style={{ color: 'purple' }}>{tables.name}</h1></div>
+    <div className="container" style={{textAlign:'center'}}>
+      <div id="title" className="text-center"><h1 style={{ color: 'purple'}}>{tables.name}</h1></div>
       <table className="table" >
         <thead className="thead-dark">
           <tr className="bg-info">

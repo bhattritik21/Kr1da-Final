@@ -152,4 +152,5 @@ router.post('/updateUser', fetchuser,upload.single('photo'),  async (req, res) =
     }
   })
 
+  
 module.exports = router;

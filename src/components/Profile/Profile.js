@@ -217,18 +217,19 @@ function Profile() {
             <div className="profile-body" style={{ backgroundColor: 'white', padding: '2%', display: 'flex', flexDirection: 'column', textAlign: 'center' }}>
 
                 <div className="feed" style={{ margin: 'auto' }} id="m-col">
-                    {/* <div className="head" id="p-tabs">
+                    <div className="head" id="p-tabs">
                         <div className=" top active" id="tog"><span>TIMELINE</span></div>
                         <div className=" top" id="tog"><span>FRIENDS</span></div>
                         <div className="top " id="tog"><span>COMMUNITY</span></div>
                         <div className=" top" id="tog"><span>ABOUT</span></div>
-                    </div> */}
+                    </div>
                     <div className="m-mrg" id="composer">
                         <div className="top2 active "><span style={{ color: 'purple' }}>Craete Thread</span></div>
                     </div>
 
                     <form onSubmit={handleSubmit} className="create" encType="multipart/form-data" >
-                        <img src="" alt="Profile pic" />
+                        <img src={`/uploads/${profile.profilePic}`} style={{  width: '40px',borderRadius: '50%',
+                         height: '40px',border: 'solid 3px black'}} alt="Profile pic" />
                         <div className="y" >
                             <input className="form-control"
                                 value={title}
@@ -239,7 +240,8 @@ function Profile() {
                                     border: '1px solid rgb(189, 188, 188)',
                                     borderRadius: '5px',
                                     paddingLeft: '20px',
-                                    padding: '10px'
+                                    padding: '10px',
+                                    color:'black'
                                 }}
                                 id="title"
                                 name="title"
@@ -262,23 +264,29 @@ function Profile() {
                     <div className="posts">
                         {posts.map((element, index) => {
                             return <div className="post" key={index}>
-                                <div className="p-cnt-v">
-                                    <img src={`/uploads/${element.photo}`} alt="uploded" />
+                                <div className="Profile_head" style={{display:'flex',justifyContent:'flex-start'}}>
+                                <img src={`/uploads/${profile.profilePic}`} style={{  width: '25px',borderRadius: '50%',
+                         height: '25px',border: 'solid 1px black'}} alt="Profile pic" />
+                         <h5 className="text-align-center" style={{ color: 'black', fontWeight: '600' , marginLeft:'10px'}}>{profile.name}</h5>
                                 </div>
-                                <div style={{ textAlign: 'center', padding: "1% 8% 2% 8%", fontSize: '1.2em', fontWeight: '600' }} className="captions">{element.title}</div>
-                                <div className="p-acts">
+                                <div className="p-cnt-v ">
+                                    <img src={`/uploads/${element.photo}`} alt="uploded" />
+                                    <div style={{ textAlign: 'start', paddingTop:'1%', fontSize: '1.2em', fontWeight: '600'}} className="captions">{element.title}</div>
+                                </div>
+                              
+                                <div className="p-acts" style={{marginTop:'0px'}}>
                                     <div className="likez">
-                                        {(element.likes.includes(userId)) ? <div className="like"><AiFillDislike style={{ color: 'black' }} onClick={() => { handleunlikeSubmit(element._id) }}></AiFillDislike>
-                                        </div> : <div className="like"><AiFillLike style={{ color: 'black' }} onClick={() => { handlelikeSubmit(element._id) }}> </AiFillLike>
+                                        {(element.likes.includes(userId)) ? <div className="like"><AiFillDislike style={{ color: 'black' ,width:'25px'}} onClick={() => { handleunlikeSubmit(element._id) }}></AiFillDislike>
+                                        </div> : <div className="like"><AiFillLike style={{ color: 'black' ,width:'25px'}} onClick={() => { handlelikeSubmit(element._id) }}> </AiFillLike>
                                         </div>}
 
                                         <h5>{element.likes.length} likes</h5>
                                     </div>
 
-                                    <div className="comment"><span>{element.comments.length}</span><MdModeComment style={{ color: 'black' }}></MdModeComment>
+                                    <div className="comment"><span>{element.comments.length}</span><MdModeComment style={{ color: 'black' ,width:'25px'}}></MdModeComment>
                                     </div>
-                                    <div className="edits"><MdModeEdit style={{ color: 'black' }} ></MdModeEdit>
-                                        <MdDeleteForever style={{ color: 'black' }} onClick={() => { handleDelete(element._id) }}></MdDeleteForever>
+                                    <div className="edits"><MdModeEdit style={{ color: 'black' ,width:'25px'}} ></MdModeEdit>
+                                        <MdDeleteForever style={{ color: 'black' ,width:'25px'}} onClick={() => { handleDelete(element._id) }}></MdDeleteForever>
                                     </div>
 
                                 </div>

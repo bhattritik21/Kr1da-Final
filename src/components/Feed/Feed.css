@@ -1,0 +1,29 @@
+.post
+{    display: flex;
+    flex-direction: column;
+     margin-top: 20px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 3px 3px #ddd;
+    height: fit-content;
+    border: 2px solid rgb(238, 236, 236);
+}
+
+.p-cnt-v
+{  width: 85%;
+    height: 400px;
+    margin: auto;
+  
+}
+.p-cnt-v>img{
+    background-size: cover;
+    height: 90%;
+    width: 100%;
+    border: solid 3px rgb(241, 240, 240);
+    border-radius: 10px;
+}
+.p-acts{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+}

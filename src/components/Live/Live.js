@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react'
+import Livechat from './Livechat'
 import { BiFootball} from "react-icons/bi"
 import('./live.css')
+
 
 
 function Live() {
@@ -74,9 +76,8 @@ function Live() {
                                 })}
                             </div>
                         </div>
-                        <div id="live_chat">
-
-                        </div>
+                        <Livechat topic={element.id}/>
+               
                     </div>
                 }
             })}

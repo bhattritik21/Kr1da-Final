@@ -16,5 +16,100 @@ body{
     padding: 2%;
     border-top: 2px solid rgb(206, 206, 206);
 }
+#live_chat{
+    margin: auto;
+}
+#title_container {
+    width: fit-content;
+    margin: auto;
+    padding: 1% 4% 1% 4%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #D64045;
+    border-bottom: 0px solid #fff;
+    box-shadow: 0 0 30px -9px #8a8484;
+    border-radius: 20px;
+}
+#title_inner_container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #083D77; */
+    border-radius: 200px;
+}
+#title {
+    display: inline-block;
+    color: #fff;
+    letter-spacing: 2px;
+    user-select: none;
+    font-weight: 900;
+    font-size: 2em;
+}
+#join_button {
+    width: 60%;
+    height: 40px;
+    font-family: Varela Round;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+}
+.chat_box{
+    display: flex;
+    flex-direction: column;
+    border:2px solid black;
+    width:50%;
+    margin: 2% auto 2% auto;
+    padding: 1%;
+    overflow-y: auto;
+    max-height: 500px;
+    border-radius: 10px;
+}
 
-  
+
+.chat1
+{
+display: flex;
+flex-direction: column;
+width: 100%;
+}
+.chat2
+{
+display: flex;
+flex-direction: column;
+flex-wrap: wrap-reverse;
+width: 100%;
+ }
+.chat1>h5,   .chat2>h5{
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 1%;
+    width: fit-content;
+    font-weight: bold;
+
+}
+.chat1>h5{
+    background-color: rgb(218, 45, 45);
+}
+.chat2>h5{
+    background-color: rgb(123, 194, 95);
+    float: right;
+}
+
+.chat1>p, .chat2>p{
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 1%;
+    color:black;
+    width: fit-content;
+    background-color: rgb(235, 227, 227);
+}
+.create{
+    border: none !important ;
+
+}
+

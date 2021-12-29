@@ -4,7 +4,7 @@ var cors = require('cors')
 
 connectToMongo();
 const app = express()
-const port = 5000
+const PORT =process.env.PORT || 5000
 
 app.use(cors())
 app.use(express.json())
@@ -14,8 +14,9 @@ app.use(express.static(__dirname+'../public/'))  //All the uplaods will be trans
 // Available Routes
 app.use('', require('./routes/auth'))
 app.use('', require('./routes/profile'))
+app.use('', require('./routes/livechat'))
 
 
-app.listen(port, () => {
-  console.log(`kr1da backend listening at http://localhost:${port}`)
+app.listen(PORT, () => {
+  console.log(`kr1da backend listening at http://localhost:${PORT}`)
 })

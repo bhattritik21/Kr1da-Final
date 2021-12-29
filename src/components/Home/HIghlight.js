@@ -20,8 +20,8 @@ function HIghlight() {
     return (
         <div id="news">
             {loading && <div className="news " style={{
-                backgroundImage: `url(${articles.images[0].url})`, backgroundSize: 'cover',
-                height: '400px', width: '100%', margin: 'auto', borderRadius: '10px'
+                backgroundImage: `url(${articles.images[0].url})`,  backgroundSize: 'cover',
+                backgroundPositionY:' center', height: '400px', width: '100%', margin: 'auto', borderRadius: '10px'
             }}>
                 <div className="shade">
                     <div className="contents">

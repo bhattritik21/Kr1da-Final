@@ -21,8 +21,9 @@ const Login = (props) => {
         if (json.success) {
             // Save the auth token and redirect
             localStorage.setItem('token', json.authtoken);
+            localStorage.setItem('userId',json.data.user['id']);
             history.push("/");
-            props.showAlert("Acoount created succesfuly", "success");
+            // props.showAlert("Acoount created succesfuly", "success");
 
         }
         else {

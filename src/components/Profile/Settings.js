@@ -36,9 +36,11 @@ function Settings() {
 
 
     return (
-        <div className="container" style={{ marginTop: '50px' }}>
+        <div className="container" style={{ marginTop: '150px' }}>
             <form onSubmit={handleSubmit} className="create" encType="multipart/form-data" >
-
+                <div className="BIO">
+                    <h3 style={{color:'black'}}>Update your Bio</h3>
+                </div>
                 <input className="form-control"
                     value={bio}
                     onChange={onChange}
@@ -56,6 +58,7 @@ function Settings() {
                     placeholder="What's on your mind?" />
 
                 <div className="btn">
+                    <h4>Choose a profile pic</h4>
                     <input
                         className="form-control"
                         style={{ width: '20vw', padding: '2px', marginTop: '5px' }}

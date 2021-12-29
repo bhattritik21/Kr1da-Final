@@ -14,6 +14,7 @@ import SignUp from './components/SignUp/SignUp';
 import Login from './components/Login/Login';
 import {reducer,initialState} from './reducers/userReducer'
 import Settings from './components/Profile/Settings';
+import Feed from './components/Feed/Feed';
 
 
 const UserContext = createContext()
@@ -47,7 +48,7 @@ const App = ()=> {
           <Route exact path="/live"><Live/></Route> 
           <Route exact path="/stats"><Stats/></Route> 
           <Route exact path="/settings"><Settings/></Route> 
-          {/* <Route exact path="/feed"><Feed/></Route>  */}
+          <Route exact path="/feed"><Feed/></Route> 
           <Route exact path="/login"><Login showAlert={showAlert}/></Route> 
           <Route exact path="/signup"><SignUp showAlert={showAlert}/></Route> 
         </Switch>
